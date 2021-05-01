@@ -15,7 +15,9 @@ ${answers.license}
 
 ## Table of Contents
 
-
+## Installation
+${answers.installation}
+<br />
 `
 inquirer
   .prompt([
