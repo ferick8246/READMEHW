@@ -18,6 +18,15 @@ ${answers.license}
 ## Installation
 ${answers.installation}
 <br />
+## Usage
+${answers.usage}
+<br />
+## Contributing
+${answers.contribution}
+<br />
+## Questions
+${answers.userName}
+${answers.email}
 `
 inquirer
   .prompt([
