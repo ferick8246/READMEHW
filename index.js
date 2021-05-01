@@ -31,36 +31,44 @@ ${answers.email}
 inquirer
   .prompt([
     { type: 'input',
-      name: 'name',
-      message: 'What is your name?',
+      name: 'title',
+      message:'What is the name of your Project?',
     },
     { type: 'input',
-      name: 'location',
-      message: 'Where are you from?',
+      name: 'description',
+      message:'Please describe project?',
     },
     { type: 'input',
-      name: 'hobby',
-      message: 'What is your favorite hobby?',
+      name: 'installation',
+      message:'What are the steps to install your project?',
     },
     { type: 'input',
-      name: 'food',
-      message: 'What is your favorite food?',
+      name: 'usage',
+      message:'Provide example or what is this project use for?',
+    },
+    {
+      type:'input',
+      name:'contribution',
+      message:'if any, provide any contributors to your project?',
+    },
+    {
+      type:'list',
+      name:'license',
+      choices:['Apache license 2.0', 'Boost Software License 1.0', 'MIT', 'Mozilla Public License 2.0',
+       'Open Software License 3.0', 'The Unlicense', 'gnu gpl-3.0'],
+      message: 'Choose a license used for this project?',
+    },
+    { type:'input',
+      name:'github',
+      message:'Enter your GitHub Username',
     },
     { type: 'input',
-      name: 'github',
-      message: 'Enter your GitHub Username',
-    },
-    { type: 'input',
-      name: 'linkedin',
-      message: 'Enter your LinkedIn URL.',
+      name: 'email',
+      message: 'What is your email?',
     },
   ])
   
 
-
-
-// TODO: Create an array of questions for user input
-const questions = [];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
