@@ -14,6 +14,11 @@ ${answers.license}
 <br/>
 
 ## Table of Contents
+-[Installation](#Installation)
+-[Usage](#Usage)
+-[Constributing](#Constributing)
+-[Questions](#Questions)
+<br />
 
 ## Installation
 ${answers.installation}
@@ -25,7 +30,11 @@ ${answers.usage}
 ${answers.contribution}
 <br />
 ## Questions
-${answers.userName}
+* GitHub: https://github.com/ferick8246/READMEHW
+${answers.github}
+
+* For more questions you can reach me at my Email:(ferick8246@gmail.com)
+
 ${answers.email}
 `
 inquirer
@@ -67,11 +76,18 @@ inquirer
       message: 'What is your email?',
     },
   ])
+  .then((answers) => {
+    const readmeContent = teLaDejoCaer(answers);
+    writeToFile("readme.md", readmeContent)
+  });
+
   
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  fs.writeFileSync(fileName,data)
+}
 
 // TODO: Create a function to initialize app
 function init() {}
